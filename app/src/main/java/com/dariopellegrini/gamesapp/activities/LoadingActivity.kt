@@ -22,7 +22,6 @@ class LoadingActivity : AppCompatActivity() {
 
     private fun load() = CoroutineScope(Dispatchers.Main).launch {
         try {
-            Repository.deleteUser()
 
             val alreadyLogged = Repository.loggedUserExists()
             if (alreadyLogged) {

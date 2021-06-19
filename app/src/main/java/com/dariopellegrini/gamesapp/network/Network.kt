@@ -67,7 +67,7 @@ class Network {
             baseURL = gamesBaseURL
             path = "games"
             method = SpikeMethod.GET
-            headers = mapOf("Authorization" to token)
+            headers = mapOf("Authorization" to "Bearer $token")
         }
         val games = result.mappingThrowable()
         return games

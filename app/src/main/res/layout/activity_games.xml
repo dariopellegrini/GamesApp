@@ -6,12 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".activities.GamesActivity">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textStyle="bold"
-        android:textSize="32sp"
-        android:gravity="center"
-        android:text="Games" />
+        android:layout_height="match_parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
