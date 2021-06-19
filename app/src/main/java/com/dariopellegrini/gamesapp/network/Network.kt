@@ -65,7 +65,7 @@ class Network {
     suspend fun getGames(token: String): List<Game> {
         val result = request<List<Game>> {
             baseURL = gamesBaseURL
-            path = "games"
+            path = "games?_sort=dateCreated"
             method = SpikeMethod.GET
             headers = mapOf("Authorization" to "Bearer $token")
         }

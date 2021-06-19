@@ -16,10 +16,22 @@ object Repository {
     }
 
     suspend fun games(): List<Game> {
-        val currentUser = database.readUser()
-        val token = currentUser?.token ?: throw Exception("Non autorizzato")
-        val games = network.getGames(token)
-        return games
+        try {
+            val currentUser = database.readUser()
+            val token = currentUser?.token ?: throw Exception("Non autorizzato")
+            val games = network.getGames(token)
+
+            database.saveGames(games)
+            return games
+        } catch (e: Exception) {
+
+            val games = database.getGames()
+            if (games.isNotEmpty()) {
+                return games
+            } else {
+                throw e
+            }
+        }
     }
 
     suspend fun loggedUserExists(): Boolean {
