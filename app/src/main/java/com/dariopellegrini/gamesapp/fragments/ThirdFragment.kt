@@ -14,14 +14,6 @@ class ThirdFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        val s = "Ciao"
-        s.addPrefix("Prefix")
-
-        "10/12/2020".toDate()
-
-        date.string("dd-mm-yyyy")
-
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
