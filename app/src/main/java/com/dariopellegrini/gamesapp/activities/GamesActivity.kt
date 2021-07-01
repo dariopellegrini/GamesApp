@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.dariopellegrini.declarativerecycler.BasicRow
 import com.dariopellegrini.declarativerecycler.RecyclerManager
 import com.dariopellegrini.gamesapp.R
+import com.dariopellegrini.gamesapp.network.Network
 import com.dariopellegrini.gamesapp.repository.Repository
 import com.dariopellegrini.gamesapp.rows.GameRow
 import com.dariopellegrini.gamesapp.utilities.alert

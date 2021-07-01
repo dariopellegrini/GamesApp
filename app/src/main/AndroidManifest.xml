@@ -16,14 +16,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GamesApp">
-        <activity android:name=".activities.GamesActivity"></activity>
-        <activity android:name=".activities.LoginActivity" />
-        <activity android:name=".activities.LoadingActivity">
+        <activity android:name=".activities.TabActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".activities.GamesActivity" />
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.LoadingActivity">
         </activity>
         <activity android:name=".activities.MainActivity" />
     </application>
